@@ -1,0 +1,23 @@
+x[o, p, w] -> how much or order o and product p is provided from warehouse w
+
+
+CONSTANTS
+c[w, p] initial number of product p in warehouse w
+q[o, p] quantity of product p in order o
+d[o, w] distance between order o and warehouse w
+
+
+SUCH THAT
+# all quantities are positive
+for all o, p, w, 0 <= x[o, p, w]
+
+# a warehouse can not provide more of a product than is has in stock
+for all p and w, sum(x[o, p, w] for o in orders) <= c[w, p]
+
+# do not deliver
+for all o and p, sum(x[o, p, w] for w in warehouses) <= q[o, p]
+
+
+MINIMIZE
+
+sum(d[o, w, p] for all o, w, p)

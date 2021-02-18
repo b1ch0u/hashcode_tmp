@@ -1,0 +1,7 @@
+{% for server in sol.servers -%}
+{% if server.is_allocated %}
+{{ server.row server.slot server.pool }}
+{% else %}
+x
+{% endif -%}
+{%- endfor -%}

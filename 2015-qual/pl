@@ -1,0 +1,43 @@
+--- Variables ---
+
+s[i,j] = 1 if server i is in block j
+p[i,j] = 1 if server i is in pool j
+
+--- Constants ---
+
+b[j,k] = 1 if block j is in row k
+c[i] = capacity of server i
+w[i] = size of server i
+wb[j] = size of block j
+
+blocks number = B
+servers number = M
+rows number = R
+
+
+--- Constraints ---
+
+// Each server must be in only one block
+
+sum for j=0 to B-1 ( s[0,j] ) <= 1 // server 0 must be in only one block
+sum for j=0 to B-1 ( s[1,j] ) <= 1 // server 1 must be in only one block
+...
+sum for j=0 to B-1 ( s[M-1,j] ) <= 1 // server M-1 must be in only one block
+
+// Capacity of each block
+
+sum for i=0 to M-1 ( s[i,0] * w[i] ) <= wb[0] // Sum of all server sizes cannot exceed size of block 0
+sum for i=0 to M-1 ( s[i,1] * w[i] ) <= wb[1] // Sum of all server sizes cannot exceed size of block 1
+...
+sum for i=0 to M-1 ( s[i,0] * w[B-1] ) <= wb[B-1] // Sum of all server sizes cannot exceed size of block B-1
+
+
+--- Objective ---
+
+// Maximize capacity of each block
+
+sum for i=0 to M-1 ( s[i,0] * c[i] ) // sum of server capacities from block 0
+sum for i=0 to M-1 ( s[i,1] * c[i] ) // sum of server capacities from block 1
+...
+sum for i=0 to M-1 ( s[i,B-1] * c[i] ) // sum of server capacities from block B-1
+

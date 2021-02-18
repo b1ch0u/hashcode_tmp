@@ -1,0 +1,7 @@
+nodes_nb streets_nb max_time cars_nb initial_node ;
+nodes : nodes_nb * [
+    lat?float long?float ;
+]
+streets : streets_nb * [
+    start end type cost value ;
+]

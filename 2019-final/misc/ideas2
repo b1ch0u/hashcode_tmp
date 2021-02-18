@@ -1,0 +1,8 @@
+
+
+a = 58 pts         6 fichiers      3 targets       2 seveurs
+b = 992 418 pts     5150 fichiers   50 targets      100 seveurs c'est de type 100 fichiers on besoin d'un seul fichier et après tous sont necessaires pour un fichier. ça plein de fois
+c = 2 690 568 pts   9896 fichiers   20 targets      30 seveurs même delire qu'au dessus. puis un truc à la suite genre a->b->c->d->e etc. puis un ou ya zero dépendances sur 30 fichiers qui sont necessaires à un autr fichier. alternance entre ces 3 types
+d = 23 561 pts
+e = 873 813 pts
+f = 2 178 105 pts   9992 fichiers   4336 targets       100 seveurs gros merdier

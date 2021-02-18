@@ -1,0 +1,58 @@
+greedy
+
+Pour les H
+OK former graphe complet
+OK  valeur sur les aretes sont les interets
+- TSP max
+
+Pour les V
+- groupes aleatoires
+- groupe dans l'ordre du fichier
+- groupe par le moins d'affinite (randomisable)
+- matching max
+
+
+
+AB CD AB CD
+
+AB AB => 2  
+CD CD => 2
+Total 4
+
+AB CD => 4
+AB CD => 4
+Total 8
+
+maximiser total
+(matching max)
+
+
+
+- groupe de photos qui partagent la moitié de leur tag en commun
+
+
+ameliorations :
+- chercher paire (triplet, etc) de slides a inverser (melanger) qui ameliore le score
+- chercher paire (triplet, etc) de photos V a inverser (melanger) qui ameliore le score
+
+
+trouver pour chaque photo les 5/10 qui donnent la meilleure affinite
+faire un tsp sur ce graphe avec un greedy (lookahead)
+
+selectionner le tag le + rare (/ un tag aleatoire / le + frequent), tsp sur les photos qui l'ont, recommencer
+
+qu debut du greedy, parcourir toute la liste. chaque slide avec un score raisonnable par rapport a celle courante est mise au debut.
+Puis on fait une rotation d'autant d'elements qu'on a bouges (/aleatoire) et on recommence
+L'obj est que dans la liste resultante, les photos ont des chances de marquer des points ensemble soient proches, et ainsi accelerer le greedy limité
+pour determiner ce qui est un score raisonnable, commencer par faire un histogramme des scores
+
+Pour b, deplacer les sections qui sont font 0 a gauche et a droite, et recoller a un endroit qui fait 0,
+de sorte qu'au moins une des deux bornes fasse 3
+
+
+reorganisation offsets:
+b 3
+c 2
+
+
+mcts en ne selectionnant que celles > offset

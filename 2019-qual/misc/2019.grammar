@@ -1,0 +1,4 @@
+photos_nb ;
+photos : photos_nb * [
+    orientation?str tags_nb [tags]
+]

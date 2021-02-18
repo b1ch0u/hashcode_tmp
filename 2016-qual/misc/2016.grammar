@@ -1,0 +1,14 @@
+rows_nb columns_nb drones_nb max_time max_load;
+products_nb;
+weights : products_nb * weight;
+warehouses_nb;
+warehouses : warehouses_nb * [
+    row col;
+    availabality : products_nb * product_av;
+];
+orders_nb;
+orders : orders_nb * [
+    row col;
+    size;
+    items : size * item_id;
+];

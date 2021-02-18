@@ -1,0 +1,7 @@
+rows_nb slots_nb unavailable_slots_nb pools_nb servers_nb ;
+unavailables : unavailable_slots_nb * [
+    row col ;
+]
+servers : servers_nb * [
+    size capacity ;
+]

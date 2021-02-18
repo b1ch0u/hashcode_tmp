@@ -1,0 +1,7 @@
+{{ cars_nb }}
+{% for itinerary in sol -%}
+{{ itinerary|length }}
+{% for junction in itinerary -%}
+{{ junction }}
+{% endfor -%}
+{%- endfor -%}

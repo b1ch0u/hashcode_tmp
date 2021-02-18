@@ -1,0 +1,30 @@
+prendre tous les fichiers (S0) sans dep, on les repartit
+on prend tous les fichiers (S1) qui ne dependent que de fichiers dans S0, on les repartit
+et
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    [a b d e]
+    [c f]
+]

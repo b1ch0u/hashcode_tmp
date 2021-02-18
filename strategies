@@ -1,0 +1,46 @@
+diviser pour regner
+glouton
+alea
+alea n
+glouton
+glouton alea
+glouton alea n
+bruteforce
+recuit simule
+programmation dynamique
+programmation lineaire
+a *
+branch and bound
+mcts
+heuristique manuelle
+différentes façons de construire la solution ? (verticale / horizontale)
+lien problème classique
+visualisation
+bien réfléchir au début le format de data et de sol
+classe sol ?
+numba
+classe env
+quels fichiers valent des points ? quelle structure particuliere ?
+taille de l'espace d'actions ?
+
+
+
+TODO modifier parser pour autoriser les tuples
+TODO verifier syncro
+mise en cache de precalcul
+TODO cheatsheet
+todo SSH pour exec ?
+microservices ?
+chacun dans son main / terminal ?
+
+
+dans le cas d'une simulation, il faut coder un simulateur et une fonction de score
+pb sur le code partagé inutilisable quand qqn le modifie
+decouper en plusieurs mains / par fonction
+commencer par avoir une solution vraiment basique, puis étudier les fichiers 1 par 1
+
+1 pers écrit les classes de base et le parser (et le writer)
+1 pers écrit le simulateur (classe Solution)
+2 pers de réfléchir et coder une solution (+ gérer le code des autres)
+
+avoir chacun son terminal
